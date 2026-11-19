@@ -256,6 +256,12 @@
     .close__tel { font-size: var(--v-t-lg); }
     .foot__more { display: none; }
   }
+  /* плашка «демо для заказчика»: для показа на Kwork, в Тильду не переносится.
+     Снимается по «убери плашку демо» и при упаковке. Без анимации, видна без скролла. */
+  .demo-for { display: inline-flex; align-items: center; gap: .6em; margin: 0 0 var(--v-4);
+    font-size: var(--v-t-xs); letter-spacing: .04em; font-weight: 500; color: var(--v-ink);
+    background: color-mix(in oklab, var(--v-surface) 85%, transparent); border: 1px solid var(--v-hair-strong);
+    border-radius: 999px; padding: .42em .95em; }
 </style>
 </head>
 <body>
@@ -302,6 +308,8 @@
         </div>
 
         <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 1 0 0">
+          <!-- плашка демо для заказчика: снимается по «убери плашку демо», в Тильду не переносится -->
+          <p class="demo-for">Демо для заказчика</p>
           <span class="v-label hero__label">Течь, смеситель, унитаз, розетка, автомат · выезд на дом</span>
           <h1 class="v-display v-display--xl" data-v-kinetic="words">Сантехник и электрик в {{город}} – гарантия на работу письменно</h1>
           <p class="v-lede">Устраним течь, заменим смеситель, розетку или автомат. Цена до начала работы, стандартные детали с собой, гарантия – в акте.</p>
